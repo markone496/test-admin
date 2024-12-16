@@ -48,7 +48,7 @@ class SysController extends Controller
     public function getOssConfig()
     {
         $config = config('admin')['upload'];
-        $ali_config = $config['connections'][$config['OSS']];
+        $ali_config = $config['connections'][$config['default']];
         $key = CacheKeyService::SYS_UPLOAD_SIGN;
         $sign = RedisService::get($key);
         $dir = $ali_config['OSS_DIR'] . '/';
