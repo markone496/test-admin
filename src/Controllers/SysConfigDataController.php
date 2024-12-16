@@ -57,8 +57,8 @@ class SysConfigDataController extends BaseModelController
     {
         $primary_key = $request->input('primary_key');
         $model = ConfigModel::query()->where('id', $primary_key)->first();
-        $form = ModelService::getModelForm($model->model_id, $model->data);
-        return $this->view('lzadmin/config/index', compact('form', 'model'));
+        $editForm = ModelService::getModelForm($model->model_id, $model->data);
+        return $this->view('lzadmin/config/index', compact('editForm', 'model'));
     }
 
     public function update(Request $request)
