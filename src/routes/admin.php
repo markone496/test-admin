@@ -100,6 +100,9 @@ Route::domain($config['domain'])->group(function () {
                 /**** 系统配置 ****/
                 Route::get('/configData', [C\SysConfigDataController::class, 'indexView']);//页面
                 Route::post('/configData/list', [C\SysConfigDataController::class, 'getList']);//列表数据
+                Route::post('/configData/edit', [C\SysConfigDataController::class, 'editView']);//配置页
+                Route::post('/configData/update', [C\SysConfigDataController::class, 'update']);//保存配置
+
                 /**** 配置 ****/
                 Route::get('/config/{index_key}', [C\SysConfigController::class, 'configView']);//配置页
                 Route::post('/config/update/{index_key}', [C\SysConfigController::class, 'save']);//保存配置

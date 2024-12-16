@@ -59,47 +59,4 @@ class SysConfigController extends BaseModelController
         ];
     }
 
-
-    /**
-     * 配置页
-     * @param $index_key
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
-     */
-    public function configView($index_key)
-    {
-        $model = ConfigModel::query()->where('index_key', $index_key)->first()->toArray();
-        $form = ModelService::getModelForm($model['model_id'], $model['data']);
-        $auth = isAuth($model['function_id']);
-        return $this->view('lzadmin/config/index', compact('form', 'auth', 'model'));
-    }
-
-    /**
-     * 保存配置
-     * @param $index_key
-     * @param Request $request
-     * @return array
-     */
-    public function save($index_key, Request $request)
-    {
-        $data = [];
-        $config = ConfigModel::query()->where('index_key', $index_key)->first()->toArray();
-        $model = ModelService::getModelById($config['model_id']);
-        foreach ($model['form_config'] as $item) {
-            $field = $item['field'];
-            $value = $request->input($field, '');
-            if (!empty($item['required'])) {
-                if (!isset($value)) {
-                    return $this->error('【' . $item['title'] . '】参数必填');
-                }
-            }
-            $data[$field] = $value;
-        }
-        $result = ConfigModel::query()->where('index_key', $index_key)->update(['data' => $data]);
-        if (!$result) {
-            return $this->error();
-        }
-        ConfigService::refreshCache($index_key);
-        return $this->result($result);
-    }
-
 }
