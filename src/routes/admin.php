@@ -97,6 +97,9 @@ Route::domain($config['domain'])->group(function () {
                 Route::post('/role/update', [C\SysRoleController::class, 'update']);//编辑角色
                 Route::post('/role/delete', [C\SysRoleController::class, 'delete']);//删除角色
                 Route::post('/role/copy', [C\SysRoleController::class, 'copy']);//复制角色
+                /**** 系统配置 ****/
+                Route::get('/configData', [C\SysConfigDataController::class, 'indexView']);//页面
+                Route::post('/configData/list', [C\SysConfigDataController::class, 'getList']);//列表数据
                 /**** 配置 ****/
                 Route::get('/config/{index_key}', [C\SysConfigController::class, 'configView']);//配置页
                 Route::post('/config/update/{index_key}', [C\SysConfigController::class, 'save']);//保存配置
