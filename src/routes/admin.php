@@ -103,10 +103,6 @@ Route::domain($config['domain'])->group(function () {
                 Route::get('/configData/info', [C\SysConfigDataController::class, 'editView']);//配置详情
                 Route::get('/configData/edit', [C\SysConfigDataController::class, 'editView']);//配置页
                 Route::post('/configData/update', [C\SysConfigDataController::class, 'update']);//保存配置
-
-                /**** 配置 ****/
-                Route::get('/config/{index_key}', [C\SysConfigController::class, 'configView']);//配置页
-                Route::post('/config/update/{index_key}', [C\SysConfigController::class, 'save']);//保存配置
             });
 
             Route::middleware(['admin.auth'])->group(function () {
