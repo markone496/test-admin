@@ -67,6 +67,9 @@ INSERT INTO `sys_function` VALUES (8, '新增', '[\"sys/user/edit\", \"sys/user/
 INSERT INTO `sys_function` VALUES (9, '编辑', '[\"sys/user/edit\", \"sys/user/update\"]', 4, '[\"4\", \"3\", \"2\"]', '2023-12-06 08:24:52', '2024-04-18 09:33:48');
 INSERT INTO `sys_function` VALUES (10, '删除', '[\"sys/user/delete\"]', 4, '[\"4\", \"3\", \"2\"]', '2023-12-06 08:25:01', '2024-04-18 09:33:51');
 INSERT INTO `sys_function` VALUES (11, '重置密码', '[\"sys/user/password\"]', 4, '[\"4\", \"3\", \"2\"]', '2023-12-06 08:25:11', '2024-04-18 09:33:54');
+INSERT INTO `sys_function` VALUES (12, '查看', '[\"sys/configData\", \"sys/configData/list\", \"sys/configData/info\"]', 7, '[\"7\", \"6\", \"2\"]', '2024-12-16 08:36:34', '2024-12-16 08:48:17');
+INSERT INTO `sys_function` VALUES (13, '编辑', '[\"sys/configData/edit\", \"sys/configData/update\"]', 7, '[\"7\", \"6\", \"2\"]', '2024-12-16 08:48:32', '2024-12-16 09:51:30');
+
 
 -- ----------------------------
 -- Table structure for sys_log
@@ -117,6 +120,9 @@ INSERT INTO `sys_menu` VALUES (2, 0, '[]', '系统管理', 'layui-icon layui-ico
 INSERT INTO `sys_menu` VALUES (3, 2, '[\"2\"]', '管理员', 'layui-icon layui-icon-group', NULL, 0, 0, '2024-04-19 06:19:06', '2023-12-06 06:42:31');
 INSERT INTO `sys_menu` VALUES (4, 3, '[\"3\", \"2\"]', '用户', NULL, '/sys/user', 0, 0, '2024-04-07 08:32:38', '2023-12-06 06:42:52');
 INSERT INTO `sys_menu` VALUES (5, 3, '[\"3\", \"2\"]', '角色', NULL, '/sys/role', 0, 0, '2023-12-06 06:43:03', '2023-12-06 06:43:03');
+INSERT INTO `sys_menu` VALUES (6, 2, '[\"2\"]', '配置项', 'layui-icon layui-icon-set-sm', NULL, 0, 0, '2024-12-16 09:24:33', '2024-12-16 08:35:06');
+INSERT INTO `sys_menu` VALUES (7, 6, '[\"6\", \"2\"]', '配置列表', NULL, '/sys/configData', 0, 0, '2024-12-16 09:24:42', '2024-12-16 08:36:23');
+
 
 -- ----------------------------
 -- Table structure for sys_model
