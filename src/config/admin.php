@@ -83,15 +83,21 @@ return [
                 "OSS_CDN" => env('OSS_CDN', ''),//访问地址
                 "OSS_DIR" => env('OSS_DIR', ''),//文件上传目录
             ],
-//
-//            "QINIU" => [
-//                "QINIU_ACCESS_KEY_ID" => env('QINIU_ACCESS_KEY_ID', ''),//AccessKey
-//                "QINIU_ACCESS_KEY_SECRET" => env('QINIU_ACCESS_KEY_SECRET', ''),//SecretKey
-//                "QINIU_HOST" => env('QINIU_HOST', ''),//上传地址
-//                "QINIU_CDN" => env('QINIU_CDN', ''),//访问地址
-//                "QINIU_DIR" => env('QINIU_DIR', ''),//文件上传目录
-//                "QINIU_BUCKET" => env('QINIU_BUCKET', ''),//储存桶
-//            ]
+
         ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | 模型脚本页配置
+    |--------------------------------------------------------------------------
+    |
+    | key：模型ID
+    | value: 脚本文件
+    | 脚本文件示例：resources/views/lzadmin/script/demo
+    |
+    */
+    'model_script' => [
+//        1 => '/script/demo',
     ]
 ];

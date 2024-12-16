@@ -222,9 +222,10 @@ class BaseModelController extends Controller
     public function indexView()
     {
         $view = 'lzadmin/layouts/index';
-//        if (!empty(ModelService::CONFIG_INDEX_VIEW[$this->model_id])) {
-//            $view = ModelService::CONFIG_INDEX_VIEW[$this->model_id];
-//        }
+        $config = config('admin')['model_script'];
+        if (!empty($config[$this->model_id])) {
+            $view = $config[$this->model_id];
+        }
         return view($view, $this->compact());
     }
 
