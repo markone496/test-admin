@@ -43,19 +43,13 @@ class SysConfigDataController extends BaseModelController
                 ['title' => '新增', 'event' => 'create', 'color' => '', 'function_id' => '']
             ],
             'tool_config' => [
-                ['bind' => '', 'title' => '编辑', 'event' => 'update', 'color' => '', 'function_id' => ''],
-                ['bind' => '', 'title' => '删除', 'event' => 'delete', 'color' => 'layui-bg-red', 'function_id' => '']
+                ['bind' => '', 'title' => '详情', 'event' => 'update', 'color' => '', 'function_id' => ''],
+                ['bind' => '', 'title' => '编辑', 'event' => 'delete', 'color' => '', 'function_id' => '']
             ],
             'search_config' => [
                 ['table' => 'sys_config', 'field' => 'index_key', 'title' => '标识', 'category' => 'input', 'option' => '', 'type' => '', 'range' => '', 'show_const' => '1'],
                 ['table' => 'sys_config', 'field' => 'title', 'title' => '标题', 'category' => 'input', 'option' => '', 'type' => '', 'range' => '', 'show_const' => '1']
             ],
-            'form_config' => [
-                ['table' => 'sys_config', 'field' => 'index_key', 'title' => '标识', 'category' => 'input', 'required' => '1', 'value' => '', 'option' => '', 'type' => 'text', 'ban_edit' => ''],
-                ['table' => 'sys_config', 'field' => 'title', 'title' => '标题', 'category' => 'input', 'required' => '1', 'value' => '', 'option' => '', 'type' => 'text', 'ban_edit' => ''],
-                ['table' => 'sys_config', 'field' => 'model_id', 'title' => '模型ID', 'category' => 'input', 'required' => '1', 'value' => '', 'option' => '', 'type' => 'number', 'ban_edit' => ''],
-                ['table' => 'sys_config', 'field' => 'function_id', 'title' => '权限ID', 'category' => 'input', 'required' => '1', 'value' => '', 'option' => '', 'type' => 'number', 'ban_edit' => ''],
-            ]
         ];
     }
 
