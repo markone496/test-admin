@@ -47,14 +47,14 @@ class SysController extends Controller
      */
     public function getOssConfig()
     {
-        $ali_config = config('aliyun');
-        $ali_config = $ali_config['oss'];
+        $config = config('admin')['upload'];
+        $ali_config = $config['connections'][$config['OSS']];
         $key = CacheKeyService::SYS_UPLOAD_SIGN;
         $sign = RedisService::get($key);
-        $dir = $ali_config['dir'] . '/';
+        $dir = $ali_config['OSS_DIR'] . '/';
         if (empty($sign)) {
-            $accessKeyId = $ali_config['accessKeyId'];
-            $accessKeySecret = $ali_config['accessKeySecret'];
+            $accessKeyId = $ali_config['OSS_ACCESS_KEY_ID'];
+            $accessKeySecret = $ali_config['OSS_ACCESS_KEY_SECRET'];
             //todo 设置过期时间
             $now = time();
             $expire = 3000;
@@ -77,8 +77,8 @@ class SysController extends Controller
             $base64_policy = base64_encode($policy);
             $signature = base64_encode(hash_hmac('sha1', $base64_policy, $accessKeySecret, true));
             $sign = [
-                'host' => $ali_config['host'],
-                'cdn_host' => $ali_config['cdn_host'],
+                'host' => $ali_config['OSS_HOST'],
+                'cdn_host' => $ali_config['OSS_CDN'],
                 'accessKeyId' => $accessKeyId,
                 'policy' => $base64_policy,
                 'signature' => $signature,
