@@ -27,7 +27,6 @@ CREATE TABLE `sys_config`  (
   `title` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '标题',
   `data` json NULL COMMENT '配置',
   `model_id` int(11) NOT NULL COMMENT '模型ID',
-  `function_id` int(11) NOT NULL COMMENT '权限ID',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`id`) USING BTREE,

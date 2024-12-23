@@ -34,7 +34,6 @@ class SysConfigDataController extends BaseModelController
                 ['table' => 'sys_config', 'field' => 'index_key', 'alias' => '', 'title' => '标识', 'width' => '200', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
                 ['table' => 'sys_config', 'field' => 'title', 'alias' => '', 'title' => '标题', 'width' => '200', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
                 ['table' => 'sys_config', 'field' => 'model_id', 'alias' => '', 'title' => '模型ID', 'width' => '200', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
-                ['table' => 'sys_config', 'field' => 'function_id', 'alias' => '', 'title' => '权限ID', 'width' => '200', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
                 ['table' => 'sys_config', 'field' => 'data', 'alias' => '', 'title' => '配置', 'width' => '300', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
                 ['table' => 'sys_config', 'field' => 'created_at', 'alias' => '', 'title' => '创建时间', 'width' => '170', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => ''],
                 ['table' => 'sys_config', 'field' => 'updated_at', 'alias' => '', 'title' => '修改时间', 'width' => '170', 'fixed' => '', 'align' => 'center', 'sort' => '', 'option' => '', 'show_type' => '']
