@@ -12,7 +12,7 @@
             <div class="layui-col-md7">
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        菜单列表
+                        菜单列表：<span class="layui-badge">模型列表：/model/{模型ID}、按月查询列表: /subTable/{模型ID}</span>
                     </div>
                     <div class="layui-card-body">
                         <table class="layui-hide" id="menuTable" lay-filter="menuTable"></table>
@@ -21,8 +21,8 @@
             </div>
             <div class="layui-col-md5" id="functionItem" style="display: none">
                 <div class="layui-card">
-                    <div class="layui-card-header functionHeader">
-                        权限列表
+                    <div class="layui-card-header">
+                        <span class="functionHeader">权限列表</span>：<span class="layui-badge">方法名前不要加 “ / ”</span>
                     </div>
                     <div class="layui-card-body">
                         <table class="layui-hide" id="functionTable" lay-filter="functionTable"></table>
